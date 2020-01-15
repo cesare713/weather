@@ -1,0 +1,112 @@
+<!doctype HTML>
+
+<html>
+    <head>
+        <meta charset="utf-8" / >
+        <meta name="author" content="Daehee Nam" />
+        <meta name="viewport" content="initial-scale=1, width=device-width, user-scalable=no" />
+        <title>C-Weather v0.01</title>
+        <link href="css/common.css" rel="stylesheet" />
+        <link href="css/bootstrap.css" rel="stylesheet" />
+        <link href="css/all.css" rel="stylesheet" />
+        <script src="script/jquery-3.4.1.min.js"></script>
+        <script src="script/bootstrap.js"></script>
+        <script src="script/all.js"></script>
+        
+    </head>
+    
+    <body>
+        <header>
+            <div id="hdbar" class="navbar">
+                <div class="col-6">
+                    <img src="images/logo.png" alt="로고" / >
+                    C-Weather
+                 </div>
+                <div class="col-6 text-right dropdown">
+                    <button id="locbtn" type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">Location</button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="locbtn">
+                        <a href="#" class="dropdown-item citybtn" data="Seoul">서울</a>
+                        <a href="#" class="dropdown-item citybtn" data="Busan">부산</a>
+                        <a href="#" class="dropdown-item citybtn" data="Daejeon">대전</a>
+                        <a href="#" class="dropdown-item citybtn" data="Daegu">대구</a>
+                        <a href="#" class="dropdown-item citybtn" data="Chicago">시카고</a>
+                        <a href="#" class="dropdown-item citybtn" data="custom">
+                            <i class="fas fa-map-marker-alt"></i>
+                            사용자 위치
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <section>
+            <div id="top">
+                <div>
+                    <p id="date"></p>
+                    <script>
+                        var now = new Date();
+                        var year = now.getFullYear();
+                        var month = now.getMonth() + 1;
+                        var date = now.getDate();
+                        $("#date").text(year+"년 "+month+"월 "+date+"일");
+                    </script>
+
+                    <p id="city">Daejeon</p>
+                    <i id="icon" class="fas fa-cloud-rain"></i>
+                    <p id="info"></p>
+                </div>
+            </div>
+            
+            <div id="midbot">
+                <div id="mid" class="row">
+                    <div class="col-4 etc">
+                        <i id="dir" class="fas fa-arrow-alt-circle-up"></i>
+                        <span id="speed"></span>
+                        <br/>
+                        <i class="fas fa-tint"></i>
+                        <span id="hum"></span>
+                    </div>
+                    <div class="col-4 temp">
+                        
+                    </div>
+                    <div class="col-4 minmax">
+                        <i class="fas fa-arrow-up"></i>
+                        <span id="max"></span>
+                        <br/>
+                        <i class="fas fa-arrow-down"></i>
+                        <span id="min"></span>
+                    </div>
+                </div>
+                <div id="bot">
+                    <div class="fc">
+                        <span class="fdate"></span><br/>
+                        <i class="fas fa-cloud"></i><br/>
+                        <span class="ftemp"></span>
+                    </div>
+                    <div class="fc">
+                        <span class="fdate"></span><br/>
+                        <i class="fas fa-cloud"></i><br/>
+                        <span class="ftemp"></span>
+                    </div>
+                    <div class="fc">
+                        <span class="fdate"></span><br/>
+                        <i class="fas fa-cloud"></i><br/>
+                        <span class="ftemp"></span>
+                    </div>
+                    <div class="fc">
+                        <span class="fdate"></span><br/>
+                        <i class="fas fa-cloud"></i><br/>
+                        <span class="ftemp"></span>
+                    </div>
+                    <div class="fc">
+                        <span class="fdate"></span><br/>
+                        <i class="fas fa-cloud"></i><br/>
+                        <span class="ftemp"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <script src="script/script.js"></script>
+    </body>
+</html>

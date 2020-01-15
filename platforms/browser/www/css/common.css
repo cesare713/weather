@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+#hdbar {
+    background-color: #fafafa;
+    border-bottom: 1px solid #fefefe;
+}
+
+section {
+    overflow: auto;
+    background-color: white;
+    background-image: url(../images/day_clear.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 0.02em 0.02em 0.5em rgba(0,0,0,0.7);
+}
+
+.navbar {
+    padding-left: 10px!important;
+    padding-right: 10px!important;
+}
+
+#top {
+    position: relative;
+}
+
+#top>div {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 0.5em;
+}
+
+#top>div>svg {
+    font-size: 6em;
+}
+
+#city {
+    font-size: 2.3em;
+}
+
+#date {
+    margin-bottom: 0px;
+}
+
+#info {
+    margin-top: 1.5em;
+}
+
+#mid {
+    height: 110px;
+    border-top: 1px solid rgba(255,255,255,,0.4);
+    border-bottom: 1px solid rgba(255,255,255,,0.4);
+}
+
+#bot {
+    height: 110px;
+}
+
+.stext {
+    font-size: 1.8em!important;
+}
+
+.temp {
+    font-size: 2.6em;
+    text-align: center;
+    line-height: 110px;
+    padding:0!important;
+}
+
+.temp::after {
+    content: "\2103";
+    margin-left: -0.2eml
+}
+
+.row {
+    width: 100%;
+    margin: 0!important;
+}
+
+#speed::after {
+    content: "m/s";
+    margin-left: -0.05em;
+    font-size: 0.8em;
+}
+
+#hum::after {
+    content: "%";
+    margin-left: -0.05em;
+    font-size: 0.8em;
+}
+
+.etc,
+.minmax {
+    font-size: 1.3em;
+    text-align: center;
+    padding-top: 1em;
+}
+
+#max::after,
+#min::after {
+    content: "\2103";
+    font-size: 0.8em;
+}
+
+.minmax svg:first-of-type {
+    border-top: 3px solid white;
+}
+
+.minmax svg:last-of-type {
+    border-bottom: 3px solid white;
+}
+
+.fc {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding-top: 1em;
+}
+
+.fc svg {
+    font-size: 1.5em;
+}
+
+.ftemp::after {
+    content: "\2103";
+}
+
+@media all and (orientation:landscape) {
+    #hdbar {
+        height: 60px;
+    }
+    
+    #top {
+        width: 40%;
+        float: left;
+        height: calc(100vh - 60px)!important;
+    }
+    
+    #midbot {
+        width: 60%;
+        float: left;
+        background-color: rgba(0,0,0,0.2);
+    }
+    
+}
